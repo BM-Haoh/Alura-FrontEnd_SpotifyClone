@@ -1,8 +1,8 @@
 /* HEADER */
 
 .main-container {
-    max-width: 80vw; /* Largura máxima de 80 viewport (basicamente 80% da tela) */
-    height: 100vh; /* Altura de 100 viewport  */
+    max-width: 80vw;
+    height: 100vh;
     margin-left: 320px;
     margin-right: 56px;
     position: fixed;
@@ -28,7 +28,7 @@
 }
 
 .header__navigation .navigation .arrow-left {
-    margin-right: 1.25rem; /* rem = unidade de medida relativa. */
+    margin-right: 1.25rem;
 }
 
 .arrow-left, .arrow-right {
@@ -71,10 +71,10 @@
     border: none;
     padding: 0 100px 0 12px;
     color: #fff;
-    text-overflow: ellipsis; /* texto muito grande: cortado + '...' */
-    overflow: hidden; /* trabalha junto ao text-overflow; Não deixa estourar o campo, ele que propriamente coloca a reticências */
-    white-space: nowrap; /* não quebra o texto em linhas, sempre vai estar em uma linha só. */
-    outline: none; /* remove a "borda" do texto do input */
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    white-space: nowrap; 
+    outline: none;
 }
 
 .header__login .subscribe {
@@ -128,7 +128,7 @@
 .offer__scroll-container {
   max-height: 43vh;
   margin: 24px;
-  overflow-y: auto; /* torna essa parte scrollável na vertical */
+  overflow-y: auto;
 }
 
 .offer__scroll-container::-webkit-scrollbar {
@@ -138,10 +138,10 @@
 .offer__scroll-container::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
-/* FIM SCROLL */
+/* END SCROLL */
 
 .offer__list-item {
-  display: grid; /* divide o conteúdo em grades */
+  display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
@@ -211,7 +211,7 @@
   .card15 {
     background: rgb(60, 30, 80);
   }
-  /* FIM COLOR CARDS */
+  /* END COLOR CARDS */
 
 .offer__list-item img {
   position: absolute;
@@ -222,7 +222,7 @@
   transform: rotate(25deg) translate(18%, -2%);
 }
 
-/* CARD ARTISTA */
+/* ARTISTS CARDS */
 .artist {
   --column-count: 5;
   --grid-gap: 24px;
@@ -320,7 +320,7 @@
 
 .artist-card:hover .play .fa-play {
   opacity: 1;
-  transform: translateY(-20px); /* "animação" */
+  transform: translateY(-20px);
 }
 
 .play .fa-play:hover {
