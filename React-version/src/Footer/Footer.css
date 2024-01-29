@@ -1,0 +1,48 @@
+.disclaimer-premium {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    background: rgb(255,2,228);
+    background: linear-gradient(90deg, rgba(255,2,228,1) 0%, rgba(164,62,175,1) 27%, rgba(74,100,193,1) 67%, rgba(46,147,252,1) 100%);
+    color: #fff;
+}
+
+.disclaimer-premium .text {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0 20px 25px;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.disclaimer-premium .disclaimer-premium__title {
+    margin-bottom: 7px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.disclaimer-premium .disclaimer-premium__subtitle {
+    font-size: 14px;
+}
+
+.disclaimer-premium button {
+    /* display: flex;
+    justify-content: center; */
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    padding: 0 30px;
+    margin: 15px 30px;
+    height: 35px;
+    /* width: 160px; */
+    cursor: pointer;
+    flex-shrink: 0;
+}

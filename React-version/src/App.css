@@ -1,0 +1,14 @@
+body {
+  background-color: #000;
+}
+
+.main-container {
+  max-width: 80vw; /* Largura máxima de 80 viewport (basicamente 80% da tela) */
+  height: 100vh; /* Altura de 100 viewport  */
+  margin-left: 320px;
+  margin-right: 56px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}

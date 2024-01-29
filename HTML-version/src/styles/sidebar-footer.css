@@ -1,0 +1,269 @@
+body {
+    background-color: #000;
+    font-family: var(--font-dm-sans); /* altera a fonte do texto. */
+}
+
+.sidebar {
+    /* position define a posição. fixed faz fixa em um ponto na tela. */
+    position: fixed;
+
+    /* top, right, left e bottom definem a posição em relação ao seu nome (topo, direita, esquerda, baixo). Devem aparecer em conjunto do position fixed ou absolute ou relative. */
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    /* padding com um único valor faz com que todos os 4 valores assumam esse valor. */
+    padding: 0.75rem;
+
+    /* width define a largura do objeto com a classe em questão. */
+    width: 18.75rem;
+}
+
+.sidebar__navigation {
+    background-color:  #121212;
+    /* border-radius serve para tornar arredondado as pontas do retângulo do botão ou div ou nav, etc. */
+    border-radius: 0.5rem;
+    /* padding faz o espaçamento entre os elementos dentro, nesse caso, da classe sidebar__navigation
+    sua ordem é: cima, direita, baixo, esquerda */
+    /* padding: 16px 0 0 16px; */
+    cursor: pointer;
+}
+
+.sidebar__navigation .logo {
+    /* background é um elemento geral. é possível definir diversas características do background ao mesm tempo usando ele, uma dessas seria o background-color. */
+    background: #121212;
+
+    /* flexbox é uma técnica do css. Tráz formas de fazer a orientação do código mais flexivelmente. Display flex permite alterar a orientação, o posicionamento desses objetos na tela, de forma muito mais fácil, seja em colunas, linhas... */
+    display: flex;
+    border-radius: 0.5rem;
+    padding: 1rem 0 0 1rem;
+}
+
+/* Ao declarar algo como "[classe] [tipo de elemento] {}", como ".logo img {}", você diz que está alterando esse tipo de elemento específico, mas apenas internos à classe em questão. */
+.sidebar__navigation .logo img {
+    width: 5rem;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    margin-top: 1.25rem;
+    padding: 0 1.25rem 0.625rem 1.25rem;
+}
+
+.sidebar nav ul li {
+    /* Ao usar o padding com duas especificações, o primeiro serve para a linha vertical (cima e baixo) e o segundo serve para a linha horizontal (direita e esquerda) */
+    padding: 0.625rem 0;
+}
+
+.sidebar nav ul li a {
+    color: #b3b3b3;
+
+    /* text-decoration: none remove a "underline" do link */
+    text-decoration: none;
+
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.sidebar nav ul li .fa {
+    font-size: 1.25rem;
+    margin-right: 0.625rem;
+    font-weight: 300;
+}
+
+.sidebar nav ul li a:hover {
+    color: #fff;
+}
+
+.library {
+    background-color: #121212;
+    border-radius: 8px;
+
+    /* as três linhas abaixo garantem que o conteúdo dessa classe esteja organizado em colunas, um do lado do outro, horizontalmente */
+    display: flex;
+
+    /* Deixa o posicionamento dos objetos justificável; com o space-between, ele fará isso ao colocar espaços entre os objetos. Trabalha junto ao display: flex */
+    justify-content: space-between;
+
+    /* flex-direction indica qual a direção em que o posicionamento vai estar flexível. */
+    flex-direction: column;
+
+    min-block-size: 40px;
+    padding: 4px 8px;
+    color: #b3b3b3;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.library .library__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.library .library__button {
+    display: flex;
+    margin-right: 10px;
+    color: #b3b3b3;
+    background-color: transparent;
+    border: 0;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+
+    /* text-transform especifica como capitalizar um elemento de texto. Algumas opções: capitalize, uppercase, lowercase, none */
+    text-transform: none;
+    padding: 20px 10px;
+}
+
+.library .library__button .fa {
+    font-size: 20px;
+    font-weight: 300;
+    color: #b3b3b3;
+    margin-right: 10px;
+    padding-right: 8px;
+}
+
+.library .library__content .fa-plus {
+    margin: 24px 10px;
+}
+
+.section-playlist {
+    display: flex;
+
+    /* posiciona o bagulho bem no ínicio no canto superior esquerdo */
+    align-items: flex-start;
+    justify-content: space-between;
+
+    /* indica o espaço entre as propriedades. Por exemplo, tendo o space-between, com o gap vc indica qual o tamanho desse espaço */
+    gap: 20px;
+    background-color: #242424;
+    color: #b3b3b3;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 8px 0px;
+    padding: 16px 20px;
+    border-radius: 10px;
+}
+
+.section-playlist .section-playlist__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-playlist__content .text {
+    padding-bottom: 14px;
+    color: #fff;
+}
+
+.section-playlist__content .title {
+    font-weight: 700;
+}
+
+.section-playlist__content .subtitle {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.section-playlist__content .section-playlist__button {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: none;
+    padding: 10px;
+    margin-top: 12px;
+    border: 0px;
+    width: 113px;
+}
+
+.sidebar .cookies {
+    margin: 25px 20px;
+}
+
+.sidebar .cookies a {
+    color: #b3b3b3;
+    font-weight: 500;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+/* : representa uma pseudoclasse. :hover faz uma modificação para quando o mouse estiver em cima do respectivo elemento. Ele deve ser posto "colado" ao elemento */
+.sidebar .cookies a:hover {
+    text-decoration: underline;
+}
+
+.languages .languages__button {
+    align-items: center;
+    background-color: transparent;
+
+    /* shorthand: colocamos várias propriedades em uma linha só. Para border: tamanho, style, color */
+    border: 1px solid #878787;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold; /* bold +- = 700 */
+
+    /* "mãozinha" quando o cursor estiver posicionado em cima do objeto */
+    cursor: pointer;
+    width: 170px;
+    margin: 8px;
+    padding: 8px;
+}
+
+.disclaimer-premium {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+
+    /* Primeiro definimos a cor base do fundo */
+    background: rgb(255,2,228);
+    background: linear-gradient(90deg, rgba(255,2,228,1) 0%, rgba(164,62,175,1) 27%, rgba(74,100,193,1) 67%, rgba(46,147,252,1) 100%);
+    /* Então, definimos como essa cor vai variar (podemos usar sites para fazer isso, como o https://cssgradient.io/) */
+    color: #fff;
+}
+
+.disclaimer-premium .text {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0 20px 25px;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.disclaimer-premium .disclaimer-premium__title {
+    margin-bottom: 7px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.disclaimer-premium .disclaimer-premium__subtitle {
+    font-size: 14px;
+}
+
+.disclaimer-premium button {
+    /* Não sei se as duas linhas a seguir fazem sentido... */
+    /* display: flex;
+    justify-content: center; */
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    padding: 0 30px;
+    margin: 15px 30px;
+    height: 35px;
+    /* width: 160px; */
+    cursor: pointer;
+    flex-shrink: 0;
+}
