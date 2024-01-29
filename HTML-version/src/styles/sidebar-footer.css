@@ -1,45 +1,30 @@
 body {
     background-color: #000;
-    font-family: var(--font-dm-sans); /* altera a fonte do texto. */
+    font-family: var(--font-dm-sans);
 }
 
 .sidebar {
-    /* position define a posição. fixed faz fixa em um ponto na tela. */
     position: fixed;
-
-    /* top, right, left e bottom definem a posição em relação ao seu nome (topo, direita, esquerda, baixo). Devem aparecer em conjunto do position fixed ou absolute ou relative. */
     top: 0;
     left: 0;
     bottom: 0;
-
-    /* padding com um único valor faz com que todos os 4 valores assumam esse valor. */
     padding: 0.75rem;
-
-    /* width define a largura do objeto com a classe em questão. */
     width: 18.75rem;
 }
 
 .sidebar__navigation {
     background-color:  #121212;
-    /* border-radius serve para tornar arredondado as pontas do retângulo do botão ou div ou nav, etc. */
     border-radius: 0.5rem;
-    /* padding faz o espaçamento entre os elementos dentro, nesse caso, da classe sidebar__navigation
-    sua ordem é: cima, direita, baixo, esquerda */
-    /* padding: 16px 0 0 16px; */
     cursor: pointer;
 }
 
 .sidebar__navigation .logo {
-    /* background é um elemento geral. é possível definir diversas características do background ao mesm tempo usando ele, uma dessas seria o background-color. */
     background: #121212;
-
-    /* flexbox é uma técnica do css. Tráz formas de fazer a orientação do código mais flexivelmente. Display flex permite alterar a orientação, o posicionamento desses objetos na tela, de forma muito mais fácil, seja em colunas, linhas... */
     display: flex;
     border-radius: 0.5rem;
     padding: 1rem 0 0 1rem;
 }
 
-/* Ao declarar algo como "[classe] [tipo de elemento] {}", como ".logo img {}", você diz que está alterando esse tipo de elemento específico, mas apenas internos à classe em questão. */
 .sidebar__navigation .logo img {
     width: 5rem;
 }
@@ -51,16 +36,12 @@ body {
 }
 
 .sidebar nav ul li {
-    /* Ao usar o padding com duas especificações, o primeiro serve para a linha vertical (cima e baixo) e o segundo serve para a linha horizontal (direita e esquerda) */
     padding: 0.625rem 0;
 }
 
 .sidebar nav ul li a {
     color: #b3b3b3;
-
-    /* text-decoration: none remove a "underline" do link */
     text-decoration: none;
-
     font-weight: 600;
     font-size: 0.875rem;
 }
@@ -78,16 +59,9 @@ body {
 .library {
     background-color: #121212;
     border-radius: 8px;
-
-    /* as três linhas abaixo garantem que o conteúdo dessa classe esteja organizado em colunas, um do lado do outro, horizontalmente */
     display: flex;
-
-    /* Deixa o posicionamento dos objetos justificável; com o space-between, ele fará isso ao colocar espaços entre os objetos. Trabalha junto ao display: flex */
     justify-content: space-between;
-
-    /* flex-direction indica qual a direção em que o posicionamento vai estar flexível. */
     flex-direction: column;
-
     min-block-size: 40px;
     padding: 4px 8px;
     color: #b3b3b3;
@@ -111,8 +85,6 @@ body {
     font-weight: 700;
     text-align: center;
     text-decoration: none;
-
-    /* text-transform especifica como capitalizar um elemento de texto. Algumas opções: capitalize, uppercase, lowercase, none */
     text-transform: none;
     padding: 20px 10px;
 }
@@ -131,12 +103,8 @@ body {
 
 .section-playlist {
     display: flex;
-
-    /* posiciona o bagulho bem no ínicio no canto superior esquerdo */
     align-items: flex-start;
     justify-content: space-between;
-
-    /* indica o espaço entre as propriedades. Por exemplo, tendo o space-between, com o gap vc indica qual o tamanho desse espaço */
     gap: 20px;
     background-color: #242424;
     color: #b3b3b3;
@@ -193,7 +161,6 @@ body {
     text-decoration: none;
 }
 
-/* : representa uma pseudoclasse. :hover faz uma modificação para quando o mouse estiver em cima do respectivo elemento. Ele deve ser posto "colado" ao elemento */
 .sidebar .cookies a:hover {
     text-decoration: underline;
 }
@@ -201,14 +168,10 @@ body {
 .languages .languages__button {
     align-items: center;
     background-color: transparent;
-
-    /* shorthand: colocamos várias propriedades em uma linha só. Para border: tamanho, style, color */
     border: 1px solid #878787;
     border-radius: 20px;
     color: #fff;
-    font-weight: bold; /* bold +- = 700 */
-
-    /* "mãozinha" quando o cursor estiver posicionado em cima do objeto */
+    font-weight: bold;
     cursor: pointer;
     width: 170px;
     margin: 8px;
@@ -224,11 +187,8 @@ body {
     left: 0;
     right: 0;
     height: 65px;
-
-    /* Primeiro definimos a cor base do fundo */
     background: rgb(255,2,228);
     background: linear-gradient(90deg, rgba(255,2,228,1) 0%, rgba(164,62,175,1) 27%, rgba(74,100,193,1) 67%, rgba(46,147,252,1) 100%);
-    /* Então, definimos como essa cor vai variar (podemos usar sites para fazer isso, como o https://cssgradient.io/) */
     color: #fff;
 }
 
@@ -251,7 +211,6 @@ body {
 }
 
 .disclaimer-premium button {
-    /* Não sei se as duas linhas a seguir fazem sentido... */
     /* display: flex;
     justify-content: center; */
     background-color: #fff;
